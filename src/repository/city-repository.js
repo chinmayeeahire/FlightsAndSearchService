@@ -8,12 +8,12 @@ class CityRepository{
             });
             return city;
         } catch (error) {
-            console.log("Something went wrong in the repo");
+           
             throw {error};
         }
     }
 
-    async deleteCity({cityid}){
+    async deleteCity(cityid){
         try {
             await City.destroy({
                 where: {
@@ -22,7 +22,7 @@ class CityRepository{
             });
             return true;
         } catch (error) {
-             console.log("Something went wrong in the repo");
+            console.log("Something went wrong in the repo");
             throw {error};
         }
     }
