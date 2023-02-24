@@ -18,6 +18,7 @@ const setupAndStartServer=async()=>{
     // const {Airport, City } =require('./models/index');
     const db=require('./models/index');
     const sequelize=require('sequelize');
+    const {Airplane}=require('./models/index');
 
     app.listen(PORT, async()=>{
         console.log(`Server started at ${PORT}`);
@@ -62,6 +63,11 @@ const setupAndStartServer=async()=>{
         // //  await city.addAirport(newAirport);
         // console.log(city, airports);
         // console.log(city);
+
+        //49
+        // await Airplane.create({
+        //     modelNumber: "Bombardier CRJ"
+        // });
     });
 }
 
